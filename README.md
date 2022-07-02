@@ -3,7 +3,7 @@
 
 Implemented as responsive PWA (Progressive Web App)
 Fun game to play with friends.
-Check it out: [https://thirtyseconds.mardy.tk](https://thirtyseconds.mardy.tk)
+Check it out: [https://dev.impeesa.nl/30/](https://dev.impeesa.nl/30/)
 
 Note: Currently the app's language is Dutch only
 

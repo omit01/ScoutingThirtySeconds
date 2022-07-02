@@ -16,6 +16,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
         this.round = 0;
         this.started;
         this.words = [];
+        this.originalWords = [];
       }
     }
     

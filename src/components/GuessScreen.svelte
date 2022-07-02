@@ -21,7 +21,7 @@
     function endTurnPress() {
         if (confirm('Weet je zeker dat je je beurt wilt eindigen?')) {
             goToTimeUp();
-        } 
+        };
     }
 </script>
 
