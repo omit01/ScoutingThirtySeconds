@@ -16,9 +16,11 @@
 
         if(wordsDatabase.length > 1) {
             $game.words = wordsDatabase;
+            $game.originalWords = [...$game.words];
             $localStorage.setItem('game', JSON.stringify($game));
             prevGameScreen.set(InterimScore);
             currentGameScreen.set(InterimScore);
+            console.log($game.originalWords);
         } else {
             window.pushToast("Selecteer minimaal 1 categorie");
         }
@@ -54,15 +56,15 @@
                 </div>
             </div>
             
-            {#each wordLists as wordlist}
+            {#each wordLists as wordlist, i}
 
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-8 col-lg-5 mb-3">
                     <div class="card">
                         <div class="card-body c-purple text-center">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="check1" bind:checked={wordlist.select}>
-                                <label class="form-check-label" for="check1">
+                                <input class="form-check-input" type="checkbox" id="check{i}" bind:checked={wordlist.select}>
+                                <label class="form-check-label" for="check{i}">
                                     <i class="fas fa-book"></i> {wordlist.name} <small class="float-right">({wordlist.words.length})</small>
                                 </label>
                             </div>

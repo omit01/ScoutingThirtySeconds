@@ -40,6 +40,12 @@ export function setNextFiveWords() {
         const index = Math.floor(Math.random() * Math.floor(get(game).words.length));
         returnWords.push(get(game).words[index]);
         get(game).words.splice(index, 1);
+        console.log(get(game).words);
+        console.log(get(game).originalWords);
+        if (!get(game).words.length) {
+            get(game).words = [...get(game).originalWords];
+            shuffleArray(get(game).words);
+        };
     }
     currentFiveWords.set(returnWords);
 }
@@ -73,3 +79,12 @@ function compareTeamPoints(a, b) {
   
     return 0;
   }
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
