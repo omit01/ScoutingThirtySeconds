@@ -41,16 +41,6 @@ function changePoints(inputEvent) {
                 <div class="card">
                     <div class="card-body text-center c-purple border border-secondary m-3">
                         {#each $currentFiveWords as word, i}
-                        {#if i == 4}
-                        <h4 class="">
-                            <div class="form-check" on:click="{(inputBox) => {changePoints(inputBox)}}">
-                                <input class="form-check-input" type="checkbox" value="">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    {word}
-                                </label>
-                            </div>
-                        </h4>
-                        {:else}
                         <h4 class="mb-3">
                             <div class="form-check" on:click="{(inputEvent) => {changePoints(inputEvent)}}">
                                 <input class="form-check-input" type="checkbox" value="" >
@@ -59,7 +49,6 @@ function changePoints(inputEvent) {
                                 </label>
                             </div>
                         </h4>
-                        {/if}
                         {/each}
                         
                     </div>
@@ -67,7 +56,7 @@ function changePoints(inputEvent) {
             </div>
             <div class="row justify-content-center pt-3">
                 <div class="col-12 col-md-8 col-lg-6 mt-3">
-                    <div class="card bg-blue" on:click="{() => {currentGameScreen.set(InterimScore); goToNextRound()}}">
+                    <div class="card bg-orange" on:click="{() => {currentGameScreen.set(InterimScore); goToNextRound()}}">
                         <div class="card-body text-center">
                             <h2 class="c-white mb-0">Verder <i class="fas fa-chevron-right"></i></h2>
                         </div>
@@ -78,6 +67,8 @@ function changePoints(inputEvent) {
     </div>
 </div> 
 <style>
-
+input[type=checkbox]:checked + label.form-check-label{
+  text-decoration: line-through;
+}
 </style>
 
