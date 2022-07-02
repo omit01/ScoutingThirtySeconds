@@ -126,7 +126,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="c-white">Thirty Seconds</h1>
+                <h1 class="c-white">Impeesa 30 seconds</h1>
             </div>
         </div>
     </div>
@@ -144,7 +144,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-12 col-sm-6 col-md-4 mb-2">
-                                    <button class="btn bg-blue w-100 c-white"
+                                    <button class="btn bg-orange w-100 c-white"
                                         on:click="{() => addTeam()}"><i class="fas fa-plus-square"></i></button>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-4 mb-2">
@@ -166,9 +166,9 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
             {#if $game != null}
             <div class="row justify-content-center mt-3">
                 <div class="col-12 col-md-8 col-lg-6">
-                    <div class="card bg-blue" on:click="{() => resumeGame()}">
+                    <div class="card bg-orange" on:click="{() => resumeGame()}">
                         <div class="card-body text-center">
-                            <h2 class="c-white mb-0">Herstel Spel</h2>
+                            <h2 class="c-white mb-0">Verder gaan</h2>
                             <span class="c-white">{getResumeGameDateString($game.started)}</span>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ import { teams, saveTeamsToLocalStorage } from '../stores/homeStores.js'
 
             <div class="row justify-content-center mt-3 mb-3">
                 <div class="col-12 col-md-8 col-lg-6">
-                    <div class="card bg-blue" on:click="{() => startGame()}">
+                    <div class="card bg-orange" on:click="{() => startGame()}">
                         <div class="card-body text-center">
                             <h2 class="c-white mb-0">Nieuw Spel</h2>
                         </div>

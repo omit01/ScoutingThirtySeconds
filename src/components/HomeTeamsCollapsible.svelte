@@ -14,7 +14,7 @@
     
     function addPlayer(teamIndex) {
         if(newTeamMemberName.length < 1) {
-            window.pushToast("Vul een Speler naam in");
+            window.pushToast("Vul naam speler in");
             return;
         }
 

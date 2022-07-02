@@ -44,11 +44,7 @@
                 <div class="card">
                     <div class="card-body text-center c-purple border border-secondary m-3">
                         {#each $currentFiveWords as word, i}
-                        {#if i == 4}
-                        <h4 class="">{word}</h4>
-                        {:else}
                         <h4 class="mb-3">{word}</h4>
-                        {/if}
                         {/each}
                     </div>
                 </div>
@@ -56,7 +52,7 @@
         </div>
         <div class="row justify-content-center pt-5">
             <div class="col-8 col-lg-3 mb-3">
-                <div class="card bg-blue" on:click="{() => endTurnPress()}">
+                <div class="card bg-orange" on:click="{() => endTurnPress()}">
                     <div class="py-2 text-center">
                         <h2 class="c-white mb-0">Stop Beurt <i class="fas fa-chevron-right"></i></h2>
                     </div>

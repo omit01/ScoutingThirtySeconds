@@ -9,6 +9,7 @@
 
     let makeTeams = false;
     let startGame = false;
+    let rules = false;
 
     </script>
     
@@ -73,21 +74,6 @@
                                     {/if}
                                 </div>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12 text-left">
-                                    {#if !samsungInternet}
-                                    <h5 on:click="{() => {samsungInternet = !samsungInternet}}"><i class="fab fa-android"></i> Samsung Internet <i class="fas float-end d-inline fa-chevron-right"></i></h5>
-                                    <hr>
-                                    {:else}
-                                    <h5 on:click="{() => {samsungInternet = !samsungInternet}}"><i class="fab fa-android"></i> Samsung Internet <i class="fas float-end d-inline fa-chevron-down"></i></h5>
-                                    <hr>
-                                    <ol type="1">
-                                        <li>Klik op het <i class="fas fa-ellipsis-v"></i> icoontje</li>
-                                        <li>Klik op "Toevoegen aan startscherm"</li>
-                                    </ol>
-                                    {/if}
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +86,7 @@
                             <div class="row mb-2 justify-content-center">
                                 <div class="col-12">
                                     <h3 class="text-center">Spelen</h3>
-                                    <p class="mb-0">Uitleg over hoe Thirty Seconds te spelen is
+                                    <p class="mb-0">Uitleg hoe je een spel start en de regels van 30 seconds
                                     </p>
                                 </div>
                             </div>
@@ -117,7 +103,7 @@
                                         Voeg een team toe door de teamnaam in te vullen en op de <i class="fas fa-plus-square"></i> knop te klikken. <br>
                                         Voeg vervolgens spelers toe door op het team te klikken, de speler naam in te vullen en op de <i class="fas fa-plus-square"></i> knop
                                         te klikken <br> <br>
-                                        Note: Een team bestaat uit minimaal 2 spelers
+                                        Let op: Een team bestaat uit minimaal 2 spelers
                                     </p>
                                     {/if}
                                 </div>
@@ -136,14 +122,40 @@
                                     {/if}
                                 </div>
                             </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 text-left">
+                                    {#if !rules}
+                                    <h5 on:click="{() => {rules = !rules}}">3. Regels <i class="fas float-end d-inline fa-chevron-right"></i></h5>
+                                    <hr>
+                                    {:else}
+                                     <h5 on:click="{() => {rules = !rules}}">2. Regels <i class="fas float-end d-inline fa-chevron-down"></i></h5>
+                                    <hr>
+                                    <p class="">
+                                        De app toont 5 woorden die de speler in een volgorde naar keuze mag omschrijven. Elk woord dat door het team goed geraden wordt is een punt waard. De app houdt deze punten bij.<br>
+                                        De speler die omschrijft, moet zich aan de volgende spelregels houden: <br><br>
+                                        
+                                        <b>Hij MAG WEL:</b><br>
+                                        - de naam op welke manier dan ook omschrijven, waarbij zingen, neuriën en gebaren zijn toegestaan.<br>
+                                        - de woorden “en”, ”de”, ”het”, “and”, en “the”, die in sommige namen voorkomen, gebruiken.<br><br>
+                                        
+                                        <b>Hij MAG NIET:</b><br>
+                                        - de namen op de kaart noemen. - namen die van de naam op de kaart zijn afgeleid, noemen.<br>
+                                        - “klinkt als”- of “rijmt op”-tactieken gebruiken.<br>
+                                        - naar een letter of letters van het alfabet verwijzen.<br>
+                                        - naar iets wijzen.<br><br>
+                                            
+                                        De spelers die raden, roepen hun veronderstellingen, terwijl de speler die omschrijft bezig is. Zij MOGEN de letters van het alfabet WEL gebruiken, zeker als de te omschrijven naam een afkorting is.
+
+                                       </p>
+                                    {/if}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            
+        </div>    
     </div>
-</div>
     
     
     <style>

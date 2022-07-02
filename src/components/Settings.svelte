@@ -1,6 +1,5 @@
 <script>
 	import {currentGameScreen, game,  settings, saveSettings, endGame, prevGameScreen, goToHome, setDefaultSettings } from '../stores/stores.js'
-    import Credits from './Credits.svelte'
     import { fly } from 'svelte/transition';
     
    function changeGoal(){
@@ -82,13 +81,12 @@
 
             <div class="row mb-4 mt-5">
                 <div class="col-12 c-white text-center">
-                    <button on:click="{() => {currentGameScreen.set(Credits)}}" class="btn btn-small bg-blue c-white d-block mx-auto mb-2"><i class="fas fa-crown"></i> Wall of Fame <i class="fas fa-crown"></i></button>
                     <a href="https://github.com/TheMardy/ThirtySeconds/releases" class="text-decoration-underline c-white" target="_blank">Version: _VERSION</a>
                     <div on:click="{() => forceSWupdate()}" class="d-inline">
                         <i class="fas fa-sync-alt"></i>
                     </div><br>
                     
-                    <h6>Made with <i class="fas fa-heart mt-4"></i> by <a href="https://github.com/TheMardy" target="_blank">Mardy</a></h6>
+                    <h6>Made by <a href="https://github.com/TheMardy" target="_blank">Mardy</a>. Made ready for Scouting Impeesa by <a href="https://github.com/omit01" target="_blank">Timo</a></h6>
                 </div>
             </div>
     </div>
@@ -96,8 +94,4 @@
     
     
     <style>
-      .fa-heart {
-          color:#d60000;
-      }
-     
     </style>
